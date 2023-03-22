@@ -1,0 +1,107 @@
+<!--<?xml version="1.0" encoding="utf-8"?><?xml version="1.0" encoding="utf-8"?>-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.settings.SettingsFragment">
+
+
+    <!-- Data binding -->
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.tp2.viewmodel.PlaceViewModel" />
+
+        <variable
+            name="settingsFragment"
+            type="com.example.tp2.ui.settings.SettingsFragment" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top bar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:onClick="@{() -> settingsFragment.navigateToHomeFragment()}"
+            app:navigationIcon="@drawable/baseline_arrow_back_24_white"
+            app:title="@string/app_bar_settings" />
+
+
+        <!-- Contenu -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/defaultPadding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/TextView.H1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_admin_desc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/isadmin_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@{viewModel.isAdmin()}"
+                android:text="@string/settings_admin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView1" />
+
+            <!-- Devider -->
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/devider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/isadmin_switch" />
+
+            <!-- Zone debug -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/devider">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/TextView.H1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_delete_all_places_header" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/TextView.H3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/settings_delete_all_places_text" />
+                <!-- (pour debug rapidement)
+                Bouton supprimer tous les endroits enregistrés
+                 -->
+                <Button
+                    android:id="@+id/btnDeleteAllPlaces"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:onClick="@{() -> settingsFragment.deleteAllPlaces()}"
+                    android:text="@string/settings_delete_all_places" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

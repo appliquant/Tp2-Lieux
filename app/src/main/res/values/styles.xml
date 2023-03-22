@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="defaultPadding" parent="TextAppearance.AppCompat">
+        <item name="android:padding">24dp</item>
+    </style>
+
+    <style name="defaultMargin" parent="TextAppearance.AppCompat">
+        <item name="android:layout_margin">24dp</item>
+    </style>
+
+    <style name="TextView.H1" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView.H2" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextView.H3" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

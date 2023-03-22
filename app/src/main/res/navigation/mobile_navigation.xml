@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <!-- Home -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.tp2.ui.home.HomeFragment"
+        android:label="@string/title_places"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <!-- Paramètres -->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.tp2.ui.settings.SettingsFragment"
+        android:label="SettingsFragment">
+        <action
+            android:id="@+id/action_settingsFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <!-- Lieux visités -->
+    <fragment
+        android:id="@+id/placesVisitedFragment"
+        android:name="com.example.tp2.ui.placesvisited.PlacesVisitedFragment"
+        android:label="fragment_places_visited"
+        tools:layout="@layout/fragment_places_visited"/>
+    <fragment
+        android:id="@+id/editPlaceFragment"
+        android:name="com.example.tp2.ui.editplace.EditPlaceFragment"
+        android:label="fragment_edit_place"
+        tools:layout="@layout/fragment_edit_place" />
+
+    <!-- Dashboard -->
+
+</navigation>

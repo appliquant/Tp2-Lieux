@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Mes Lieux</string>
+    <string name="photopicker_unsupported">Le Photo picker est non supporté sur cet appareil</string>
+    <string name="bottom_sheet_validate_fields">Vous devez remplir tous les champs</string>
+    <string name="saved_place_confirmation">Endroit ajouté</string>
+    <string name="removed_place_confirmation">Endroit retiré</string>
+    <string name="edited_place_confirmation">Endroit édité</string>
+    <string name="deleted_place_confirmation">Endroit supprimé</string>
+    <string name="placeholder">placeholder</string>
+
+    <!-- Popup menu -->
+    <string name="popmenu_edit">Éditer</string>
+    <string name="popmenu_delete">Supprimer</string>
+
+    <!-- Confirmation suppression dialog -->
+    <string name="delete_dialog_title">Supprimer ce lieu</string>
+    <string name="delete_dialog_text">Voulez-vous vraiment supprimer ce lieu ?</string>
+    <string name="delete_dialog_confirm">Supprimer</string>
+    <string name="delete_dialog_decline">Annuler</string>
+
+
+    <!-- Labels navigation bar -->
+    <string name="title_places">Lieux</string>
+    <string name="title_visited">Visités</string>
+    <string name="title_visited_long">Lieux visités</string>
+    <string name="title_edit_place">Éditer lieu</string>
+
+    <!-- Labels app bar -->
+    <string name="app_bar_settings">Paramètres</string>
+    <string name="app_bar_add_place">Ajouter</string>
+
+    <!-- Labels ajout place (bottom sheet) -->
+    <string name="label_add_place">Ajouter un lieu</string>
+    <string name="label_name">Nom</string>
+    <string name="label_address">Adresse</string>
+    <string name="label_description">Description</string>
+    <string name="label_choose_image">Choisir image</string>
+    <string name="label_image">Image de l\'endroit</string>
+    <string name="label_confirm_add_place">Ajouter</string>
+
+    <!-- Fragment edit place -->
+    <string name="edit_place_title">Éditer un lieu</string>
+    <string name="edit_place_confirm_edit">Confirmer</string>
+    <string name="edit_place_exit_edit">Annuler</string>
+
+    <!-- Fragment Settings -->
+    <string name="settings_header">Administration</string>
+    <string name="settings_admin_desc">Mode administrateur</string>
+    <string name="settings_admin">Aciver le mode administrateur</string>
+    <string name="settings_delete_all_places_header">Debug</string>
+    <string name="settings_delete_all_places_text">Supprimer tous les endroits enregistrés</string>
+    <string name="settings_delete_all_places">Tous supprimer</string>
+    <string name="settings_delete_all_places_confirmation">Endroits supprimés</string>
+</resources>
